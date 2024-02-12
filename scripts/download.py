@@ -5,9 +5,8 @@ from botocore.config import Config
 import datetime
 from botocore.exceptions import ClientError
 # Script to find which dataset is the latest avaliable on S3
-
 import os
-
+#new env variable
 rquested_time = os.environ.get("WIND_DTE", datetime.utcnow().isoformat())
 date_to_run_with = datetime.fromisoformat(iso_date)
 print(f"d is {date_to_run_with}")
