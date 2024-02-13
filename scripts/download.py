@@ -13,7 +13,7 @@ except:
     requested_time = os.environ.get("WIND_DTE")
 
 
-date_to_run_with = datetime.fromisoformat(requested_time)
+date_to_run_with = datetime.datetime.fromisoformat(requested_time)
 print(f"d is {date_to_run_with}")
 
 s3 = boto3.client('s3', config=Config(signature_version=UNSIGNED))
