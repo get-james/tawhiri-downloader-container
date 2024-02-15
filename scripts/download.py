@@ -21,7 +21,7 @@ s3 = boto3.client('s3', config=Config(signature_version=UNSIGNED))
 BUCKET = "noaa-gfs-bdp-pds"
 
 candidate_time  = date_to_run_with
-candidate_time = candidate_time.replace(hour=18, minute=0, second=0,microsecond=0)
+#candidate_time = candidate_time.replace(hour=18, minute=0, second=0,microsecond=0)
 
 for x in range(30): # check for the last 30 possible candidates
     candidate_time_string = candidate_time.strftime("gfs.%Y%m%d/%H/atmos/gfs.t%Hz.pgrb2.0p50.f192")
